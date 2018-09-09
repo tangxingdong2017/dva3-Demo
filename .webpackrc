@@ -1,0 +1,17 @@
+{
+  "theme": "./src/theme.js",
+  "disableCSSModules": false,
+  "extraBabelPlugins": [
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es",
+      "style": true
+    }]
+  ],
+   "proxy": {
+    "/api": {
+      "target": "http://your-api-server",
+      "changeOrigin": true
+    }
+  }
+}

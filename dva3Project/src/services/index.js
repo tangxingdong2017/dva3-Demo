@@ -1,5 +1,6 @@
 import request from '../utils/request';
+import getURL from '../utils/url';
 
 export function query() {
-  return request('/api/users');
+  return request(getURL('/mock/api/users'));
 }

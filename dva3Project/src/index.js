@@ -1,6 +1,6 @@
 import dva from 'dva';
 import createHistory from 'history/createBrowserHistory';
-// import createLoading from 'dva-loading';
+import createLoading from 'dva-loading';
 import TestModel from './models/index';
 import './index.css';
 
@@ -11,9 +11,9 @@ const app = dva({
 
 // 2. Plugins
 // app.use({});
-// app.use(createLoading({
-// 	effects: true
-// }));
+app.use(createLoading({
+	effects: true
+}));
 
 // 3. Model
 app.model(require('./models/index').default);

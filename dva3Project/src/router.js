@@ -1,6 +1,8 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import dynamic from 'dva/dynamic';
+import IndexPage from './pages/index';
+import UserPage from './pages/user/index';
 
 function RouterConfig({ history, app }) {
   return (
@@ -9,13 +11,11 @@ function RouterConfig({ history, app }) {
         <Route
         	path="/"
         	exact
-        	component={dynamic({
-					  app,
-					  models: () => [
-					    import('./models/index'),
-					  ],
-					  component: () => import('./pages/index'),
-					})}
+        	component={IndexPage}
+        />
+        <Route
+        	path="/user/:userId"
+        	component={UserPage}
         />
       </Switch>
     </Router>

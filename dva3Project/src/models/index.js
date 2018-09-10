@@ -5,7 +5,10 @@ export default {
 
   namespace: 'home',
 
-  state: {},
+  state: {
+    count: 0,
+    userId: 1992,
+  },
 
   subscriptions: {
     setup({ dispatch, history }) {  // eslint-disable-line

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 import { Spin } from 'antd';
+import TodoList from './todolist';
 import styles from './index.css';
 
 class IndexPage extends React.Component {
@@ -25,6 +26,7 @@ class IndexPage extends React.Component {
           <li><a href="https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md">Getting Started</a></li>
         </ul>
         <Link to={`/user/${userId}`}>路由跳转11</Link>
+        <TodoList />
       </div>
     </Spin>
     )

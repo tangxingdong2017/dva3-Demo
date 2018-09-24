@@ -13,5 +13,12 @@
       "target": "http://your-api-server",
       "changeOrigin": true
     }
+  },
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr"
+      ]
+    }
   }
 }
